@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#26351f">
+<title>Sümeyra & Oğuzhan | Davetiyemiz</title>
+<style>
+:root{--green:#26351f;--gold:#b28a4a;--cream:#f8f5ef;--ink:#2d2a25}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.hero{min-height:720px;background:linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.46)),url("hero.png") center/cover;display:flex;align-items:flex-end;justify-content:center;padding:40px 18px 90px;color:white;text-align:center}
+.hero-inner{max-width:760px}.eyebrow{letter-spacing:.28em;font-size:13px}.names{font-size:clamp(48px,11vw,94px);letter-spacing:.08em;margin:20px 0 8px}.amp{color:#d9bb84;font-size:.6em}.intro{font-size:19px;line-height:1.6;max-width:620px;margin:auto}
+.card{max-width:920px;margin:-58px auto 0;background:rgba(255,255,255,.96);border-radius:28px;box-shadow:0 18px 60px rgba(0,0,0,.12);position:relative;padding:34px 28px}
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}.detail{padding:8px 16px;border-right:1px solid #e4ddd0}.detail:last-child{border:0}.icon{font-size:28px;color:var(--gold)}.label{font-size:12px;letter-spacing:.2em;margin-top:7px}.value{font-size:18px;margin-top:10px;line-height:1.5}
+section{max-width:920px;margin:0 auto;padding:72px 22px}.center{text-align:center}.section-title{font-size:31px;font-weight:normal;margin:0 0 14px}.orn{color:var(--gold);letter-spacing:.5em}
+.countdown{display:flex;justify-content:center;gap:12px;margin:28px 0 38px;flex-wrap:wrap}.count{min-width:95px;padding:18px 12px;background:#fff;border-radius:16px;box-shadow:0 7px 24px rgba(0,0,0,.07)}.num{font-size:34px}.small{font-size:11px;letter-spacing:.15em}
+.rsvp{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}.form-card,.info-card{background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 35px rgba(0,0,0,.07)}label{display:block;font-size:13px;margin:16px 0 7px;letter-spacing:.04em}input,select{width:100%;padding:13px 14px;border:1px solid #ddd5c8;border-radius:10px;background:#fcfaf7;font:inherit}
+.choice-wrap{display:grid;gap:10px}
+.choice{display:flex;align-items:center;gap:12px;margin:0;padding:13px 14px;border:1px solid #ddd5c8;border-radius:10px;background:#fcfaf7;cursor:pointer}
+.choice input{width:18px;height:18px;accent-color:var(--green)}
+.choice span{font-size:15px}
+button,.cta{display:inline-block;width:100%;margin-top:20px;padding:15px;border:0;border-radius:11px;background:var(--green);color:white;font:inherit;font-size:16px;letter-spacing:.08em;cursor:pointer;text-align:center;text-decoration:none}
+.note{font-size:14px;line-height:1.65}.info-row{display:flex;gap:14px;margin:20px 0}.info-icon{font-size:23px;color:var(--gold)}.map{height:220px;border-radius:18px;background:#e8e2d6;display:flex;align-items:center;justify-content:center;color:#6e675d;margin-top:20px}
+footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style:italic;font-size:28px}.qr{margin:28px auto 0;width:120px;height:120px;background:repeating-linear-gradient(45deg,#111 0 3px,#fff 3px 6px);border:10px solid #fff}
+@media(max-width:700px){.hero{min-height:650px;padding-bottom:70px}.details,.rsvp{grid-template-columns:1fr}.detail{border-right:0;border-bottom:1px solid #e4ddd0;padding:18px}.detail:last-child{border:0}.card{margin:-45px 14px 0}.count{min-width:72px}.num{font-size:28px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">BİRLİKTE BİR ÖMÜR BOYU</div>
+    <div class="names">SÜMEYRA <span class="amp">&amp;</span> OĞUZHAN</div>
+    <p class="intro">Hayatımızın en özel gününde siz değerli dostlarımızı da aramızda görmekten büyük mutluluk duyarız.</p>
+  </div>
+</header>
+
+<div class="card">
+  <div class="details">
+    <div class="detail"><div class="icon">♡</div><div class="label">TARİH</div><div class="value">13 Eylül 2026<br>Pazar</div></div>
+    <div class="detail"><div class="icon">◷</div><div class="label">PROGRAM</div><div class="value">12:30 Başlangıç<br>13:30 Nikah</div></div>
+    <div class="detail"><div class="icon">⌖</div><div class="label">MEKÂN</div><div class="value">Villa Marry<br>Gölbaşı / Ankara</div></div>
+  </div>
+</div>
+
+<section class="center">
+  <h2 class="section-title">BÜYÜK GÜNE KALAN SÜRE</h2>
+  <div class="orn">— ♡ —</div>
+  <div class="countdown">
+    <div class="count"><div class="num" id="d">--</div><div class="small">GÜN</div></div>
+    <div class="count"><div class="num" id="h">--</div><div class="small">SAAT</div></div>
+    <div class="count"><div class="num" id="m">--</div><div class="small">DAKİKA</div></div>
+    <div class="count"><div class="num" id="s">--</div><div class="small">SANİYE</div></div>
+  </div>
+  <a class="cta" href="#rsvp">♡ &nbsp; KATILIM BİLDİR</a>
+</section>
+
+<section id="rsvp">
+  <div class="rsvp">
+    <div class="form-card">
+      <h2 class="section-title">Katılımınızı<br>BİLDİRİR MİSİNİZ?</h2>
+      <p class="note">Katılım durumunuzu bildirmeniz bizim için çok değerli. Formdan ayrılmadan, bu sayfa üzerinden gönderebilirsiniz.</p>
+      <label>Ad Soyad</label><input id="guest" placeholder="Adınızı ve soyadınızı yazınız" autocomplete="name">
+      <label>Katılım Durumu</label>
+      <div class="choice-wrap">
+        <label class="choice"><input type="radio" name="attendance" value="Evet katılacağım 🥳"><span>Evet katılacağım 🥳</span></label>
+        <label class="choice"><input type="radio" name="attendance" value="Maalesef katılamayacağım 💔"><span>Maalesef katılamayacağım 💔</span></label>
+      </div>
+      <label>Kaç kişi geleceksiniz?</label><select id="people"><option value="">Seçiniz</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+      <button id="submitBtn" onclick="submitRSVP()">KATILIMI GÖNDER ♡</button>
+      <div id="msg" class="note" style="margin-top:14px"></div>
+      <iframe name="googleFormTarget" id="googleFormTarget" style="display:none"></iframe>
+    </div>
+    <div class="info-card">
+      <h2 class="section-title">DAVETİYE BİLGİLERİ</h2>
+      <div class="info-row"><div class="info-icon">♧</div><div><b>DRESS CODE</b><br>Kokteyl</div></div>
+      <div class="info-row"><div class="info-icon">♡</div><div><b>HEDİYE</b><br>En güzel hediyeniz varlığınız.</div></div>
+      <div class="info-row"><div class="info-icon">⌖</div><div><b>MEKÂN</b><br>Villa Marry, Gölbaşı / Ankara</div></div>
+      <a class="map" href="https://www.google.com/maps/search/?api=1&query=Villa+Marry+Garden+%26+Lounge%2C+K%C4%B1z%C4%B1lca%C5%9Far%2C+%C4%B0ncek+%C5%9Eht.+Savc%C4%B1+Mehmet+Selim+Kiraz+Blv+No%3A317%2C+G%C3%B6lba%C5%9F%C4%B1%2FAnkara" target="_blank" rel="noopener" style="text-decoration:none">⌖ &nbsp; Haritada Gör — Villa Marry</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">İyi ki varsınız, iyi ki bizimlesiniz.</div>
+  <div class="qr" aria-label="QR kod alanı"></div>
+  <p class="note">QR kod, yayınlanan davetiye bağlantısına yönlendirilecek.</p>
+</footer>
+
+<script>
+const EVENT_DATE = new Date("2026-09-13T12:30:00+03:00");
+function tick(){
+  let x = Math.max(0, EVENT_DATE - new Date());
+  const d=Math.floor(x/86400000); x%=86400000;
+  const h=Math.floor(x/3600000); x%=3600000;
+  const m=Math.floor(x/60000); x%=60000;
+  const s=Math.floor(x/1000);
+  document.getElementById("d").textContent=d;
+  document.getElementById("h").textContent=String(h).padStart(2,"0");
+  document.getElementById("m").textContent=String(m).padStart(2,"0");
+  document.getElementById("s").textContent=String(s).padStart(2,"0");
+}
+setInterval(tick,1000); tick();
+
+// GERÇEK GOOGLE FORM LINKİNİ BURAYA KOYACAĞIZ.
+// Örn: const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/....../viewform";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScq30JRScXx09CgJYNszqt25DMFcn1dVnUb7TIDVAOyg6-OLQ/formResponse";
+function submitRSVP(){
+  const name=document.getElementById("guest").value.trim();
+  const att=document.getElementById("attendance").value;
+  const people=document.getElementById("people").value;
+  const msg=document.getElementById("msg");
+  if(!name || !att){ msg.textContent="Lütfen ad soyad ve katılım durumunu seçin."; return; }
+
+  const frame=document.createElement("iframe");
+  frame.name="google-form-submit";
+  frame.style.display="none";
+  document.body.appendChild(frame);
+
+  const f=document.createElement("form");
+  f.method="POST";
+  f.action=GOOGLE_FORM_URL;
+  f.target="google-form-submit";
+  f.style.display="none";
+
+  const fields=[
+    ["entry.117859464", name],
+    ["entry.1865182526", att],
+    ["entry.1204504452", people]
+  ];
+  fields.forEach(([k,v])=>{
+    const input=document.createElement("input");
+    input.name=k; input.value=v;
+    f.appendChild(input);
+  });
+  document.body.appendChild(f);
+  f.submit();
+
+  msg.textContent="Katılımınız başarıyla alındı. Sizi düğünümüzde görmek için sabırsızlanıyoruz! ❤️";
+  document.getElementById("guest").value="";
+  document.getElementById("attendance").value="";
+  document.getElementById("people").value="1";
+}
+</script>
+</body>
+</html>
