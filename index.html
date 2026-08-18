@@ -12,7 +12,7 @@
 .hero-inner{max-width:760px}.eyebrow{letter-spacing:.28em;font-size:13px}.names{font-size:clamp(48px,11vw,94px);letter-spacing:.08em;margin:20px 0 8px}.amp{color:#d9bb84;font-size:.6em}.intro{font-size:19px;line-height:1.6;max-width:620px;margin:auto}
 .card{max-width:920px;margin:-58px auto 0;background:rgba(255,255,255,.96);border-radius:28px;box-shadow:0 18px 60px rgba(0,0,0,.12);position:relative;padding:34px 28px}
 .details{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}.detail{padding:8px 16px;border-right:1px solid #e4ddd0}.detail:last-child{border:0}.icon{font-size:28px;color:var(--gold)}.label{font-size:12px;letter-spacing:.2em;margin-top:7px}.value{font-size:18px;margin-top:10px;line-height:1.5}
-section{max-width:920px;margin:0 auto;padding:72px 22px}.center{text-align:center}.section-title{font-size:31px;font-weight:normal;margin:0 0 14px}.orn{color:var(--gold);letter-spacing:.5em}
+section{max-width:920px;margin:0 auto;padding:64px 22px}.center{text-align:center}.section-title{font-size:31px;font-weight:normal;margin:0 0 14px}.orn{color:var(--gold);letter-spacing:.5em}
 .countdown{display:flex;justify-content:center;gap:12px;margin:28px 0 38px;flex-wrap:wrap}.count{min-width:95px;padding:18px 12px;background:#fff;border-radius:16px;box-shadow:0 7px 24px rgba(0,0,0,.07)}.num{font-size:34px}.small{font-size:11px;letter-spacing:.15em}
 .rsvp{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}.form-card,.info-card{background:#fff;border-radius:24px;padding:30px;box-shadow:0 10px 35px rgba(0,0,0,.07)}label{display:block;font-size:13px;margin:16px 0 7px;letter-spacing:.04em}input,select{width:100%;padding:13px 14px;border:1px solid #ddd5c8;border-radius:10px;background:#fcfaf7;font:inherit}
 .choice-wrap{display:grid;gap:10px}
@@ -27,25 +27,17 @@ footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style
 .hero-inner{width:100%;max-width:100%}.eyebrow{font-size:11px;letter-spacing:.22em}.names{font-size:46px;line-height:.98;letter-spacing:.06em;margin:14px 0 18px}.names .amp{font-size:.58em;line-height:.8}.intro{font-size:16px;line-height:1.45;max-width:330px}
 .details,.rsvp{grid-template-columns:1fr}.detail{border-right:0;border-bottom:1px solid #e4ddd0;padding:18px}.detail:last-child{border:0}.card{margin:-45px 14px 0;padding:22px 16px}.countdown{gap:7px}.count{min-width:70px;padding:14px 8px}.num{font-size:28px}.small{font-size:9px}.cta{font-size:14px}.form-card{padding:24px 20px}
 }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap');
+.hero-image{width:100%;line-height:0;background:var(--cream)}.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
+.rsvp-title{line-height:1.05;color:var(--gold);letter-spacing:.02em}.rsvp-title span{font-family:'Great Vibes',cursive;font-weight:400;font-size:1.22em}.rsvp-title b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:.78em;letter-spacing:.12em;color:var(--ink)}
+.map-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;letter-spacing:.12em;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:14px}.map-title::before,.map-title::after{content:'— ♡ —';font-family:Georgia,serif;font-size:13px;letter-spacing:.12em;color:var(--gold)}
+footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:normal;font-size:38px;color:#5b4434;line-height:1.2}
+@media(max-width:700px){.hero-image img{width:100%;height:auto}.rsvp-title{font-size:34px}.map-title{font-size:31px}.map-title::before,.map-title::after{font-size:11px}.script{font-size:32px}}
 </style>
 </head>
 <body>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">BİRLİKTE BİR ÖMÜR BOYU</div>
-    <div class="names">SÜMEYRA<br><span class="amp">&amp;</span><br>OĞUZHAN</div>
-    <p class="intro">Hayatımızın en özel gününde siz değerli dostlarımızı da aramızda görmekten büyük mutluluk duyarız.</p>
-  </div>
-</header>
-
-<div class="card">
-  <div class="details">
-    <div class="detail"><div class="icon">♡</div><div class="label">TARİH</div><div class="value">13 Eylül 2026<br>Pazar</div></div>
-    <div class="detail"><div class="icon">◷</div><div class="label">PROGRAM</div><div class="value">12:30 Başlangıç<br>13:30 Nikah</div></div>
-    <div class="detail"><div class="icon">⌖</div><div class="label">MEKÂN</div><div class="value">Villa Marry<br>Gölbaşı / Ankara</div></div>
-  </div>
-</div>
+<header class="hero-image"><img src="hero.png" alt="Sümeyra & Oğuzhan düğün davetiyesi"></header>
 
 <section class="center">
   <h2 class="section-title">BÜYÜK GÜNE KALAN SÜRE</h2>
@@ -62,7 +54,7 @@ footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style
 <section id="rsvp">
   <div class="rsvp">
     <div class="form-card">
-      <h2 class="section-title">Katılımınızı<br>BİLDİRİR MİSİNİZ?</h2>
+      <h2 class="section-title rsvp-title"><span>Katılımınızı</span><br><b>BİLDİRİR MİSİNİZ?</b></h2>
       <p class="note">Katılım durumunuzu bildirmeniz bizim için çok değerli. Formdan ayrılmadan, bu sayfa üzerinden gönderebilirsiniz.</p>
       <label>Ad Soyad</label><input id="guest" placeholder="Adınızı ve soyadınızı yazınız" autocomplete="name">
       <label>Katılım Durumu</label>
@@ -76,7 +68,7 @@ footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style
       <iframe name="googleFormTarget" id="googleFormTarget" style="display:none"></iframe>
     </div>
     <div class="info-card map-card">
-      <h2 class="section-title">KONUM</h2>
+      <h2 class="section-title map-title">KONUM</h2>
       <p class="note" style="margin-top:-6px">Villa Marry Garden<br>Kızılcaşar, İncek Şht. Savcı Mehmet Selim Kiraz Blv. No:317<br>Gölbaşı / Ankara</p>
       <iframe class="map-frame" src="https://www.google.com/maps?q=Villa+Marry+Garden%2C+K%C4%B1z%C4%B1lca%C5%9Far%2C+%C4%B0ncek+%C5%9Eht.+Savc%C4%B1+Mehmet+Selim+Kiraz+Blv+No%3A317%2C+G%C3%B6lba%C5%9F%C4%B1%2FAnkara&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Villa Marry Garden harita"></iframe>
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Villa+Marry+Garden%2C+K%C4%B1z%C4%B1lca%C5%9Far%2C+%C4%B0ncek+%C5%9Eht.+Savc%C4%B1+Mehmet+Selim+Kiraz+Blv+No%3A317%2C+G%C3%B6lba%C5%9F%C4%B1%2FAnkara" target="_blank" rel="noopener">HARİTADA GÖRÜNTÜLE ↗</a>
