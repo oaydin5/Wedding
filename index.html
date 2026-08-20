@@ -28,19 +28,17 @@ footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style
 .details,.rsvp{grid-template-columns:1fr}.detail{border-right:0;border-bottom:1px solid #e4ddd0;padding:18px}.detail:last-child{border:0}.card{margin:-45px 14px 0;padding:22px 16px}.countdown{gap:7px}.count{min-width:70px;padding:14px 8px}.num{font-size:28px}.small{font-size:9px}.cta{font-size:14px}.form-card{padding:24px 20px}
 }
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap');
-.hero-image{width:100%;line-height:0;background:var(--cream)}.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
+.hero-image{width:100%;line-height:0;background:var(--cream)}.hero-image img{display:block;width:100%;height:auto;max-width:none;margin:0 auto}
 .form-card .section-title{font-family:'Great Vibes',cursive;font-size:36px;line-height:1.05;color:var(--gold);letter-spacing:.02em}.form-card .section-title::first-line{font-size:1.15em}
 .map-card .section-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;letter-spacing:.12em;color:var(--gold)}
 footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:normal;font-size:38px;color:#5b4434;line-height:1.2}
 @media(max-width:700px){.hero-image img{width:100%;height:auto}.form-card .section-title{font-size:34px}.map-card .section-title{font-size:31px}.script{font-size:32px}}
 
 .hero-image{position:relative;background:var(--cream);overflow:visible}
-.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
-.hero-venue-extension{width:min(66.6%,682px);height:86px;margin:-28px auto 0;background:rgba(255,255,255,.96);border-radius:0 0 28px 28px;box-shadow:0 12px 28px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:18px;letter-spacing:.02em}
+.hero-image img{display:block;width:100%;height:auto;max-width:none;margin:0 auto}
 .form-card .section-title{font-family:'Great Vibes',cursive !important;color:var(--gold) !important;font-size:36px !important;font-weight:400 !important;line-height:1.12;letter-spacing:.01em}
 .map-card .section-title{font-family:'Great Vibes',cursive !important;color:var(--gold) !important;font-size:36px !important;font-weight:400 !important;letter-spacing:.01em}
 @media(max-width:700px){
-  .hero-venue-extension{width:66.6%;height:70px;border-radius:0 0 20px 20px;font-size:15px}
   .form-card .section-title,.map-card .section-title{font-size:32px !important}
 }
 
@@ -49,11 +47,11 @@ footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:no
 .side-choice input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
 .side-choice:has(input:checked){background:#26351f;color:#fff;border-color:#26351f;box-shadow:0 5px 16px rgba(38,53,31,.16)}
 .side-choice .side-emoji{font-size:20px}
-.floral{position:absolute;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:contain;background-position:center;opacity:.92}
-.floral-left{left:0;top:690px;width:min(19vw,190px);height:690px;background-image:url('floral-left.png')}
-.floral-right{right:0;top:690px;width:min(19vw,190px);height:690px;background-image:url('floral-right.png')}
+.floral{position:fixed;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:contain;background-position:center;opacity:.82;top:42vh;height:48vh}
+.floral-left{left:0;width:min(16vw,170px);background-image:url('floral-left.png')}
+.floral-right{right:0;width:min(16vw,170px);background-image:url('floral-right.png')}
 body>header,body>section,body>footer{position:relative;z-index:1}
-@media(max-width:700px){.side-choice-wrap{grid-template-columns:1fr 1fr;gap:8px}.side-choice{font-size:13px;padding:12px 7px}.side-choice .side-emoji{font-size:18px}.floral{opacity:.72}.floral-left{width:88px;height:470px;top:760px}.floral-right{width:88px;height:470px;top:760px}}
+@media(max-width:700px){.side-choice-wrap{grid-template-columns:1fr 1fr;gap:8px}.side-choice{font-size:13px;padding:12px 7px}.side-choice .side-emoji{font-size:18px}.floral{opacity:.62;top:42vh;height:42vh;width:72px}.floral-left{left:-4px}.floral-right{right:-4px}}
 </style>
 </head>
 <body>
@@ -61,8 +59,7 @@ body>header,body>section,body>footer{position:relative;z-index:1}
 <div class="floral floral-right" aria-hidden="true"></div>
 
 <header class="hero-image">
-  <img src="hero.png" alt="Sümeyra & Oğuzhan düğün davetiyesi">
-  <div class="hero-venue-extension"><div><strong>Villa Marry Garden</strong><br><span>İncek / ANKARA</span></div></div>
+  <img src="hero-fixed.png" alt="Sümeyra & Oğuzhan düğün davetiyesi">
 </header>
 
 <section class="center">
