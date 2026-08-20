@@ -28,16 +28,26 @@ footer{padding:70px 20px;text-align:center;background:#eee8dc}.script{font-style
 .details,.rsvp{grid-template-columns:1fr}.detail{border-right:0;border-bottom:1px solid #e4ddd0;padding:18px}.detail:last-child{border:0}.card{margin:-45px 14px 0;padding:22px 16px}.countdown{gap:7px}.count{min-width:70px;padding:14px 8px}.num{font-size:28px}.small{font-size:9px}.cta{font-size:14px}.form-card{padding:24px 20px}
 }
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap');
-.hero-image{width:100%;line-height:0;background:var(--cream)}.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
-.rsvp-title{line-height:1.05;color:var(--gold);letter-spacing:.02em}.rsvp-title span{font-family:'Great Vibes',cursive;font-weight:400;font-size:1.22em}.rsvp-title b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:.78em;letter-spacing:.12em;color:var(--ink)}
-.map-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;letter-spacing:.12em;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:14px}.map-title::before,.map-title::after{content:'— ♡ —';font-family:Georgia,serif;font-size:13px;letter-spacing:.12em;color:var(--gold)}
+.hero-image{width:100%;line-height:0;background:var(--cream);overflow:hidden}.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
+.form-card .section-title{font-family:'Great Vibes',cursive;font-size:36px;line-height:1.05;color:var(--gold);letter-spacing:.02em}.form-card .section-title::first-line{font-size:1.15em}
+.map-card .section-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:600;letter-spacing:.12em;color:var(--gold)}
 footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:normal;font-size:38px;color:#5b4434;line-height:1.2}
-@media(max-width:700px){.hero-image img{width:100%;height:auto}.rsvp-title{font-size:34px}.map-title{font-size:31px}.map-title::before,.map-title::after{font-size:11px}.script{font-size:32px}}
+@media(max-width:700px){.hero-image img{width:100%;height:auto}.form-card .section-title{font-size:34px}.map-card .section-title{font-size:31px}.script{font-size:32px}}
+
+.hero-image{position:relative;background:var(--cream);overflow:visible}
+.hero-image img{display:block;width:100%;height:auto;max-width:1024px;margin:0 auto}
+.form-card .section-title{font-family:'Great Vibes',cursive !important;color:var(--gold) !important;font-size:36px !important;font-weight:400 !important;line-height:1.12;letter-spacing:.01em}
+.map-card .section-title{font-family:'Great Vibes',cursive !important;color:var(--gold) !important;font-size:36px !important;font-weight:400 !important;letter-spacing:.01em}
+@media(max-width:700px){
+  .form-card .section-title,.map-card .section-title{font-size:32px !important}
+}
 </style>
 </head>
 <body>
 
-<header class="hero-image"><img src="hero.png" alt="Sümeyra & Oğuzhan düğün davetiyesi"></header>
+<header class="hero-image">
+  <img src="hero-top.png" alt="Sümeyra & Oğuzhan düğün davetiyesi">
+</header>
 
 <section class="center">
   <h2 class="section-title">BÜYÜK GÜNE KALAN SÜRE</h2>
@@ -54,7 +64,7 @@ footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:no
 <section id="rsvp">
   <div class="rsvp">
     <div class="form-card">
-      <h2 class="section-title rsvp-title"><span>Katılımınızı</span><br><b>BİLDİRİR MİSİNİZ?</b></h2>
+      <h2 class="section-title">Katılımınızı<br>Bildirir misiniz?</h2>
       <p class="note">Katılım durumunuzu bildirmeniz bizim için çok değerli. Formdan ayrılmadan, bu sayfa üzerinden gönderebilirsiniz.</p>
       <label>Ad Soyad</label><input id="guest" placeholder="Adınızı ve soyadınızı yazınız" autocomplete="name">
       <label>Katılım Durumu</label>
@@ -63,12 +73,13 @@ footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:no
         <label class="choice"><input type="radio" name="attendance" value="Maalesef katılamayacağım 💔"><span>Maalesef katılamayacağım 💔</span></label>
       </div>
       <label>Kaç kişi geleceksiniz?</label><select id="people"><option value="">Seçiniz</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+      <label>Hangi taraftansınız?</label><select id="side"><option value="">Seçiniz</option><option value="👰🏻‍♀️ Gelin tarafı">👰🏻‍♀️ Gelin tarafı</option><option value="🤵🏻‍♂️ Damat tarafı">🤵🏻‍♂️ Damat tarafı</option></select>
       <button id="submitBtn" type="button" onclick="submitRSVP()">KATILIMI GÖNDER ♡</button>
       <div id="msg" class="note" style="margin-top:14px"></div>
       <iframe name="googleFormTarget" id="googleFormTarget" style="display:none"></iframe>
     </div>
     <div class="info-card map-card">
-      <h2 class="section-title map-title">KONUM</h2>
+      <h2 class="section-title">KONUM</h2>
       <p class="note" style="margin-top:-6px">Villa Marry Garden<br>Kızılcaşar, İncek Şht. Savcı Mehmet Selim Kiraz Blv. No:317<br>Gölbaşı / Ankara</p>
       <iframe class="map-frame" src="https://www.google.com/maps?q=Villa+Marry+Garden%2C+K%C4%B1z%C4%B1lca%C5%9Far%2C+%C4%B0ncek+%C5%9Eht.+Savc%C4%B1+Mehmet+Selim+Kiraz+Blv+No%3A317%2C+G%C3%B6lba%C5%9F%C4%B1%2FAnkara&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Villa Marry Garden harita"></iframe>
       <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Villa+Marry+Garden%2C+K%C4%B1z%C4%B1lca%C5%9Far%2C+%C4%B0ncek+%C5%9Eht.+Savc%C4%B1+Mehmet+Selim+Kiraz+Blv+No%3A317%2C+G%C3%B6lba%C5%9F%C4%B1%2FAnkara" target="_blank" rel="noopener">HARİTADA GÖRÜNTÜLE ↗</a>
@@ -105,8 +116,9 @@ function submitRSVP(){
   const selected=document.querySelector('input[name="attendance"]:checked');
   const att=selected ? selected.value : "";
   const people=document.getElementById("people").value;
+  const side=document.getElementById("side").value;
   const msg=document.getElementById("msg");
-  if(!name || !att){ msg.textContent="Lütfen ad soyad ve katılım durumunu seçin."; return; }
+  if(!name || !att || !people){ msg.textContent="Lütfen ad soyad, katılım durumu ve kişi sayısını doldurun."; return; }
 
   const frame=document.createElement("iframe");
   frame.name="google-form-submit";
@@ -123,6 +135,7 @@ function submitRSVP(){
     ["entry.117859464", name],
     ["entry.1865182526", att],
     ["entry.1204504452", people]
+    // Google Formdaki yeni Gelin/Damat tarafı entry IDsi geldiğinde buraya eklenecek.
   ];
   fields.forEach(([k,v])=>{
     const input=document.createElement("input");
@@ -136,6 +149,7 @@ function submitRSVP(){
   document.getElementById("guest").value="";
   document.querySelectorAll('input[name="attendance"]').forEach(r=>r.checked=false);
   document.getElementById("people").value="1";
+  document.getElementById("side").value="";
 }
 </script>
 </body>
