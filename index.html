@@ -47,11 +47,11 @@ footer{position:relative}.script{font-family:'Great Vibes',cursive;font-style:no
 .side-choice input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
 .side-choice:has(input:checked){background:#26351f;color:#fff;border-color:#26351f;box-shadow:0 5px 16px rgba(38,53,31,.16)}
 .side-choice .side-emoji{font-size:20px}
-.floral{position:fixed;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:contain;background-position:center;opacity:.82;top:42vh;height:48vh}
-.floral-left{left:0;width:min(16vw,170px);background-image:url('floral-left.png')}
-.floral-right{right:0;width:min(16vw,170px);background-image:url('floral-right.png')}
+.floral{position:fixed;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:contain;background-position:center;opacity:.82;top:43vh;height:34vh}
+.floral-left{left:0;width:min(13vw,145px);background-image:url('floral-left.png')}
+.floral-right{right:0;width:min(13vw,145px);background-image:url('floral-right.png')}
 body>header,body>section,body>footer{position:relative;z-index:1}
-@media(max-width:700px){.side-choice-wrap{grid-template-columns:1fr 1fr;gap:8px}.side-choice{font-size:13px;padding:12px 7px}.side-choice .side-emoji{font-size:18px}.floral{opacity:.62;top:42vh;height:42vh;width:72px}.floral-left{left:-4px}.floral-right{right:-4px}}
+@media(max-width:700px){.side-choice-wrap{grid-template-columns:1fr 1fr;gap:8px}.side-choice{font-size:13px;padding:12px 7px}.side-choice .side-emoji{font-size:18px}.floral{opacity:.68;top:40vh;height:32vh;width:78px}.floral-left{left:-4px}.floral-right{right:-4px}}
 </style>
 </head>
 <body>
@@ -59,7 +59,7 @@ body>header,body>section,body>footer{position:relative;z-index:1}
 <div class="floral floral-right" aria-hidden="true"></div>
 
 <header class="hero-image">
-  <img src="hero-fixed.png" alt="Sümeyra & Oğuzhan düğün davetiyesi">
+  <img src="hero.png" alt="Sümeyra & Oğuzhan düğün davetiyesi">
 </header>
 
 <section class="center">
@@ -133,6 +133,7 @@ setInterval(tick,1000); tick();
 // GERÇEK GOOGLE FORM LINKİNİ BURAYA KOYACAĞIZ.
 // Örn: const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/....../viewform";
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScq30JRScXx09CgJYNszqt25DMFcn1dVnUb7TIDVAOyg6-OLQ/formResponse";
+const SIDE_ENTRY_ID = "entry.1625907003"; // Google Forms yeni taraf sorusunun entry.XXXXXXX değerini buraya yazacağız.
 function submitRSVP(){
   const name=document.getElementById("guest").value.trim();
   const selected=document.querySelector('input[name="attendance"]:checked');
@@ -157,8 +158,8 @@ function submitRSVP(){
   const fields=[
     ["entry.117859464", name],
     ["entry.1865182526", att],
-    ["entry.1204504452", people]
-    // Google Formdaki yeni "Gelin/Damat tarafı" entry IDsi geldiğinde buraya eklenecek.
+    ["entry.1204504452", people],
+    ...(SIDE_ENTRY_ID ? [[SIDE_ENTRY_ID, side]] : [])
   ];
   fields.forEach(([k,v])=>{
     const input=document.createElement("input");
